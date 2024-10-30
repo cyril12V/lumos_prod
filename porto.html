@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumos Production - Agence Créative</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Section Vidéo en fond avec texte et bouton centré -->
+  <header id="intro-image" class="relative h-screen w-full flex items-start justify-start text-white">
+    <!-- Titre en haut à gauche -->
+    <h1 class="absolute top-8 left-8 text-1xl font-black title-animation">LUMOS PRODUCTION</h1>
+
+    <!-- Effet de superposition animée -->
+    <div class="overlay"></div>
+
+    <!-- Vidéo en arrière-plan -->
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+        <source src="./assets/img/k6kenz.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+</header>
+
+
+
+    <section id="portfolio" class="py-20 bg-gray-100 overflow-hidden">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-extrabold text-gray-800 mb-12 title-animation">
+                <i class="fas fa-user-camera title-icon"></i> <!-- Icône de photographe -->
+                PICS TIME
+                <img src="./assets/img/photography.png" alt="Smiley" class="pics-time-smiley">
+            </h2>
+            
+    
+            <!-- Ligne de défilement vers la gauche (infinie) -->
+            <div class="scrolling-row">
+                <div class="scroll-content">
+                    <img src="./assets/img/mariage.jpg" data-src="./assets/img/mariage.jpg" alt="Photo 1" class="scroll-image" onclick="openLightbox(0)">
+                    <img src="./assets/img/mariage.jpg" data-src="./assets/img/mariage.jpg" alt="Photo 2" class="scroll-image" onclick="openLightbox(1)">
+                    <img src="./assets/img/mariage.jpg" data-src="./assets/img/mariage.jpg" alt="Photo 3" class="scroll-image" onclick="openLightbox(2)">
+                    <img src="./assets/img/mariage.jpg" data-src="./assets/img/mariage.jpg" alt="Photo 4" class="scroll-image" onclick="openLightbox(3)">
+                    <img src="./assets/img/mariage.jpg" data-src="./assets/img/mariage.jpg" alt="Photo 1" class="scroll-image" onclick="openLightbox(0)">
+                    <img src="./assets/img/mariage.jpg" data-src="./assets/img/mariage.jpg" alt="Photo 2" class="scroll-image" onclick="openLightbox(1)">
+                    <img src="./assets/img/mariage.jpg" data-src="./assets/img/mariage.jpg" alt="Photo 3" class="scroll-image" onclick="openLightbox(2)">
+                    <img src="./assets/img/mariage.jpg" data-src="./assets/img/mariage.jpg" alt="Photo 4" class="scroll-image" onclick="openLightbox(3)">
+                </div>
+            </div>
+    
+            <!-- Ligne de défilement vers la droite (infinie) -->
+            <div class="scrolling-row reverse">
+                <div class="scroll-content">
+                    <img src="./assets/img/bapteme.jpg" data-src="./assets/img/bapteme.jpg" alt="Photo 5" class="scroll-image" onclick="openLightbox(4)">
+                    <img src="./assets/img/bapteme.jpg" data-src="./assets/img/bapteme.jpg" alt="Photo 6" class="scroll-image" onclick="openLightbox(5)">
+                    <img src="./assets/img/bapteme.jpg" data-src="./assets/img/bapteme.jpg" alt="Photo 7" class="scroll-image" onclick="openLightbox(6)">
+                    <img src="./assets/img/bapteme.jpg" data-src="./assets/img/bapteme.jpg" alt="Photo 8" class="scroll-image" onclick="openLightbox(7)">
+                </div>
+            </div>
+        </div>
+    
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox hidden">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" class="lightbox-content">
+        </div>
+    </section>
+    
+    
+    
+    
+
+    
+    <section id="services" class="py-20 bg-gradient-to-r from-gray-100 to-gray-200">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-extrabold text-gray-800 mb-12 title-animation">
+                <i class="fas fa-camera-retro title-icon"></i>
+                Nos Services
+                <img src="./assets/img/smiley.png" alt="Smiley" class="title-smiley">
+            </h2>
+            
+            
+            <div class="flex flex-wrap justify-center gap-12">
+                <!-- Carte Mariage -->
+                <div class="service-card">
+                    <img src="./assets/img/mariage.jpg" alt="Mariage" class="service-image">
+                    <div class="overlay">
+                        <span class="service-text">Mariage</span>
+                        <i class="fas fa-heart service-icon"></i>
+                    </div>
+                </div>
+                <!-- Carte Baptême -->
+                <div class="service-card">
+                    <img src="./assets/img/bapteme.jpg" alt="Baptême" class="service-image">
+                    <div class="overlay">
+                        <span class="service-text">Baptême</span>
+                        <i class="fas fa-baby service-icon"></i>
+                    </div>
+                </div>
+                <!-- Carte Événement -->
+                <div class="service-card">
+                    <img src="./assets/img/evenement.jpg" alt="Événement" class="service-image">
+                    <div class="overlay">
+                        <span class="service-text">Événement</span>
+                        <i class="fas fa-calendar service-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+</body>
+<script src="./assets/js/script.js"> </script>
+</html>
